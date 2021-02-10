@@ -1,0 +1,32 @@
+{
+  "name": "todo-solid",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:franzzua/todo-solid.git",
+  "author": "fransua <andrey-ne@mail.ru>",
+  "scripts": {
+    "watch": "webpack --watch",
+    "start": "webpack serve",
+    "build": "webpack"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "ghost-todo-stenciljs-webcomponent": "^0.0.3",
+    "ghost-todo-svelte-webcomponent": "^0.0.5",
+    "solid-auth-fetcher": "^1.3.5",
+    "solidocity": "^1.2.7",
+    "typescript": "^4.1.3",
+    "webpack": "^5.20.2"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "crypto-browserify": "^3.12.0",
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^5.0.0",
+    "less-loader": "^8.0.0",
+    "stream-browserify": "^3.0.0",
+    "string-loader": "0.0.1",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
