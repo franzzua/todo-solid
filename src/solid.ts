@@ -52,9 +52,9 @@ export class TodoDocument extends Document{
             return;
         }
         useFetch(session.fetch);
-        const tokens = JSON.parse(localStorage.getItem('solidAuthFetcherUser:global'));
-        const idToken = decode(tokens.idToken);
-        const webId = idToken.sub ?? idToken.webid;
+        // const tokens = JSON.parse(localStorage.getItem('solidAuthFetcherUser:global'));
+        // const idToken = decode(tokens.idToken);
+        const webId = session.webId;
 
         const profile = new Profile(webId);
         await profile.Init()

@@ -17,10 +17,11 @@ module.exports = {
     mode: 'development',
     resolve: {
         extensions: ['.ts', '.js', '.html', '.json'],
-        fallback: {
+        alias: {
             "crypto": require.resolve("crypto-browserify"),
             "stream": require.resolve("stream-browserify")
-        }
+        },
+        mainFields: ["browser","main"]
     },
     module: {
         rules: [
