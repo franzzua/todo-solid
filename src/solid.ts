@@ -1,6 +1,5 @@
 import {Document, entity, Entity, entitySet, EntitySet, field, Profile, useFetch} from "solidocity";
 import {getSession, handleRedirect, login} from "solid-auth-fetcher";
-import decode from "jose/lib/jwt/decode";
 
 const baseUrl = "https://todo.app"
 const schema = {
@@ -19,21 +18,20 @@ export class TodoEntity extends Entity {
 
 }
 
-export class TodoDocument extends Document{
+export class TodoDocument extends Document {
 
     @entitySet(TodoEntity, {isArray: true})
     public Todos: EntitySet<TodoEntity>;
 
 
-
-    public async AddTodo(title: string): Promise<void>{
+    public async AddTodo(title: string): Promise<void> {
         const todoEntity = this.Todos.Add();
         todoEntity.Text = title;
         todoEntity.Save();
         this.Save();
     }
 
-    public async SetState(id, state): Promise<void>{
+    public async SetState(id, state): Promise<void> {
         const todo = this.Todos.get(id);
         todo.State = state;
         todo.Save();
